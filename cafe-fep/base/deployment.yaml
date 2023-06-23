@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cafe-fep-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cafe-fep
+  template:
+    metadata:
+      labels:
+        app: cafe-fep
+    spec:
+      containers:
+      - name: cafe-fep
+        image: cafe-fep   # 사용자가 이미지 이름을 변경해야 하는 부분
+        ports:
+        - containerPort: 80
+        env:
+        - name: PROJECT_ENV
+          value: "base"
+        - name: TZ
+          value: "Asia/Seoul"
