@@ -7,4 +7,4 @@ resources:
 images:
 - name: cafe-fep
   newName: 172.30.1.68:5000/cafe_fep-django # 내 레지스트리 주소와 이미지 이름
-  newTag: 0.18.2-dev-15
+  newTag: 0.18.2-dev-16
