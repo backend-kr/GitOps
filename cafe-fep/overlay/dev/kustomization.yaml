@@ -4,9 +4,6 @@ kind: Kustomization
 resources:
   - ../../base
 
-patchesStrategicMerge:
-  - deployment.yaml
-
 images:
 - name: cafe-fep
   newName: 172.30.1.68:5000/cafe-fep
